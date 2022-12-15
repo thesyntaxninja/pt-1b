@@ -16,7 +16,7 @@ const generateAction = async (req: NextApiRequest, res: NextApiResponse) => {
         model: 'text-davinci-003',
         prompt: `${basePromptPrefix}${req.body.input}`,
         temperature: 0.7,
-        max_tokens: 250,
+        max_tokens: 2000,
     })
 
     const basePromptOutput = baseCompletion.data.choices.pop()
